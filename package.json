@@ -1,0 +1,27 @@
+{
+  "name": "mongoose-bogado-daiana",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Daiana45/mongoose-Bogado-Daiana.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Daiana45/mongoose-Bogado-Daiana/issues"
+  },
+  "homepage": "https://github.com/Daiana45/mongoose-Bogado-Daiana#readme",
+  "dependencies": {
+    "dotenv": "^18.0.8",
+    "express": "^5.3.0",
+    "express-validator": "^7.3.2",
+    "mongoose": "^9.11.3"
+  }
+}
