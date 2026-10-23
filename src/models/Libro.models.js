@@ -15,10 +15,10 @@ const libroSchema = new Schema({
         ref: "Autor",
         required: true,
     },
-    //relacion muchos a muchos.
+    //relacion muchos a muchos. Array de referencia.
     clasificaciones: [{
         type: Types.ObjectId,
-        ref: "Clasificaciones",
+        ref: "Clasificacion",
     }]
 },
 {
