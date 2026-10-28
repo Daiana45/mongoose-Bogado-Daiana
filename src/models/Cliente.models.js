@@ -20,6 +20,10 @@ const clienteSchema = new Schema({
         unique:true,
         required:true,
     },
+    activate: {
+        type: Boolean,
+        default: true,
+    },
     direccion: [
         {
             _id:false,

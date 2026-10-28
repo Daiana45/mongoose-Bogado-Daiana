@@ -1,11 +1,14 @@
 import { Router } from "express";
-import { crearCliente, obtenerClientes } from "../controllers/ClienteController.js";
+import { crearCliente, obtenerClientePorId, obtenerClientes, actualizarCliente, clienteEliminado } from "../controllers/ClienteController.js";
 
 //inicializar el router
-const router = Router();
+const ClienteRouter = Router();
 
 //definir las rutas
-router.post("/", crearCliente);
-router.get("/", obtenerClientes);
+ClienteRouter.post("/", crearCliente);
+ClienteRouter.get("/", obtenerClientes);
+ClienteRouter.get("/:id", obtenerClientePorId);
+ClienteRouter.put("/:id", actualizarCliente);
+ClienteRouter.delete("/:id", clienteEliminado);
 
-export default router;
+export default ClienteRouter;

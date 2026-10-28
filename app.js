@@ -1,11 +1,13 @@
 import express from "express";
 import { startDB } from "./src/config/database.js";
+import ClienteRouter from "./src/routes/Cliente.routes.js";
 
 const app = express();
 const PORT = process.env.PORT || 3003;
 
 //middlewares
 app.use(express.json());
+app.use("/api/clientes", ClienteRouter);
 
 
 const iniciarServidor = async () => {
