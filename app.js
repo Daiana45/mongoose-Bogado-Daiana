@@ -1,6 +1,8 @@
 import express from "express";
 import { startDB } from "./src/config/database.js";
 import ClienteRouter from "./src/routes/Cliente.routes.js";
+import AutorRouter from "./src/routes/Autor.routes.js";
+import LibroRouter from "./src/routes/Libro.routes.js";
 
 const app = express();
 const PORT = process.env.PORT || 3003;
@@ -8,6 +10,8 @@ const PORT = process.env.PORT || 3003;
 //middlewares
 app.use(express.json());
 app.use("/api/clientes", ClienteRouter);
+app.use("/api/autor", AutorRouter);
+app.use("/api/libro", LibroRouter);
 
 
 const iniciarServidor = async () => {
