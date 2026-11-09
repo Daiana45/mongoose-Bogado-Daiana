@@ -19,7 +19,11 @@ const libroSchema = new Schema({
     clasificaciones: [{
         type: Types.ObjectId,
         ref: "Clasificacion",
-    }]
+    }],
+
+    //campo para la eliminacion logica
+    activate: {type: Boolean, default: true} //marcamos la ficha del libro como dado de baja, el libro sigue ahi pero el sistema sabe que no debe mostrarlo
+    //cuando mongoose crea un libro le pone activate: true, y para que no se borre para siempre usamos: await LibroModel.findByIdAndUpdate(id, { activate: false }, { new: true }); 
 },
 {
     timestamps: true,
